@@ -5,12 +5,6 @@ def valid_move?(board, index)
   elsif index.between?(0, 8) != position_taken?(board, index)
     return false
   end
-
-  if board[index] && board[index] != position_taken?(board, index)
-    return true
-  elsif board[index] != board && board[index] == position_taken?(board, index)
-    return false
-  end
 end
 
 # re-define your #position_taken? method here, so that you can use it in the #valid_move? method above.
